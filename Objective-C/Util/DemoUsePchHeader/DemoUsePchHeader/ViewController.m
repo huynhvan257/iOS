@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // Don't import in self, because had import pch 
     NSLog(@"Hello Word");
     [Util isNil:nil];
 }
