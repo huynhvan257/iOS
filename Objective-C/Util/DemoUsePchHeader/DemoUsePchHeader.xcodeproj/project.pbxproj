@@ -13,6 +13,8 @@
 		21802F1D1C6DC28D00BD09E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21802F1B1C6DC28D00BD09E0 /* Main.storyboard */; };
 		21802F1F1C6DC28D00BD09E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21802F1E1C6DC28D00BD09E0 /* Assets.xcassets */; };
 		21802F221C6DC28D00BD09E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21802F201C6DC28D00BD09E0 /* LaunchScreen.storyboard */; };
+		21802F2A1C6DC4FE00BD09E0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 21802F291C6DC4FE00BD09E0 /* README.md */; };
+		21802F301C6DC5AD00BD09E0 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 21802F2F1C6DC5AD00BD09E0 /* Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		21802F1E1C6DC28D00BD09E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21802F211C6DC28D00BD09E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21802F231C6DC28D00BD09E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21802F291C6DC4FE00BD09E0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		21802F2B1C6DC58100BD09E0 /* MyPrefixHeaderFile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPrefixHeaderFile.pch; sourceTree = "<group>"; };
+		21802F2D1C6DC59D00BD09E0 /* define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
+		21802F2E1C6DC5AD00BD09E0 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		21802F2F1C6DC5AD00BD09E0 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,7 @@
 		21802F061C6DC28D00BD09E0 = {
 			isa = PBXGroup;
 			children = (
+				21802F291C6DC4FE00BD09E0 /* README.md */,
 				21802F111C6DC28D00BD09E0 /* DemoUsePchHeader */,
 				21802F101C6DC28D00BD09E0 /* Products */,
 			);
@@ -58,6 +66,7 @@
 		21802F111C6DC28D00BD09E0 /* DemoUsePchHeader */ = {
 			isa = PBXGroup;
 			children = (
+				21802F2C1C6DC58900BD09E0 /* Util */,
 				21802F151C6DC28D00BD09E0 /* AppDelegate.h */,
 				21802F161C6DC28D00BD09E0 /* AppDelegate.m */,
 				21802F181C6DC28D00BD09E0 /* ViewController.h */,
@@ -67,6 +76,7 @@
 				21802F201C6DC28D00BD09E0 /* LaunchScreen.storyboard */,
 				21802F231C6DC28D00BD09E0 /* Info.plist */,
 				21802F121C6DC28D00BD09E0 /* Supporting Files */,
+				21802F2B1C6DC58100BD09E0 /* MyPrefixHeaderFile.pch */,
 			);
 			path = DemoUsePchHeader;
 			sourceTree = "<group>";
@@ -77,6 +87,16 @@
 				21802F131C6DC28D00BD09E0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21802F2C1C6DC58900BD09E0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				21802F2D1C6DC59D00BD09E0 /* define.h */,
+				21802F2E1C6DC5AD00BD09E0 /* Util.h */,
+				21802F2F1C6DC5AD00BD09E0 /* Util.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +158,7 @@
 			files = (
 				21802F221C6DC28D00BD09E0 /* LaunchScreen.storyboard in Resources */,
 				21802F1F1C6DC28D00BD09E0 /* Assets.xcassets in Resources */,
+				21802F2A1C6DC4FE00BD09E0 /* README.md in Resources */,
 				21802F1D1C6DC28D00BD09E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +173,7 @@
 				21802F1A1C6DC28D00BD09E0 /* ViewController.m in Sources */,
 				21802F171C6DC28D00BD09E0 /* AppDelegate.m in Sources */,
 				21802F141C6DC28D00BD09E0 /* main.m in Sources */,
+				21802F301C6DC5AD00BD09E0 /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DemoUsePchHeader/MyPrefixHeaderFile.pch";
 				INFOPLIST_FILE = DemoUsePchHeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanht..DemoUsePchHeader;
@@ -272,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DemoUsePchHeader/MyPrefixHeaderFile.pch";
 				INFOPLIST_FILE = DemoUsePchHeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanht..DemoUsePchHeader;
@@ -298,6 +322,7 @@
 				21802F281C6DC28D00BD09E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
